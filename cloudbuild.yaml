@@ -1,0 +1,7 @@
+steps:
+    - name: ubuntu
+      entrypoint: /bin/sh
+      args:
+          - -c
+          - |
+              for i in $(seq 1 10); do echo "\033[F\033[2K${i}" && sleep 1; done
