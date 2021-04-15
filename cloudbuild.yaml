@@ -4,4 +4,5 @@ steps:
       args:
           - -c
           - |
-              for i in $(seq 1 10); do echo "\033[F\033[2K${i}" && sleep 1; done
+              env
+              for i in $(seq 1 10); do echo -e "\e[F\e[2K${i}" && sleep 1; done
