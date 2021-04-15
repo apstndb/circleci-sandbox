@@ -4,4 +4,4 @@ jobs:
     docker:
       - image: ubuntu
     steps:
-      - run: for i in $(seq 1 10); do echo -e "\e[F\e[2K${i}" && sleep 1; done
+      - run: for i in $(seq 1 10); do printf "\033[F\033[2K${i}\n" && sleep 1; done
